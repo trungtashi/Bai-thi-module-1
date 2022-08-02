@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 4</title>
+</head>
+<body>
+    <canvas id="rectangle" width="600" height="400" style="border:1px solid"></canvas>
+</body>
+<script>
+    class Rectangle{
+        width
+        height
+        x
+        y
+        color
+        constructor(x,y,width,height,color){
+            this.width = width
+            this.height = height
+            this.x = x
+            this.y = y
+            this.color = color
+        }
+        setWidth(width){
+            this.width = width
+        }
+        setHeight(height){
+            this.height = height
+        }
+        setX(x){
+            this.x = x
+        }
+        setY(y){
+            this.y = y
+        }
+        setColor(color){
+            this.color = color
+        }
+        render(r){
+            ctx.beginPath()
+            ctx.fillStyle = this.color
+            ctx.fillRect(this.x, this.y, this.width, this.height)
+            ctx.closePath()
+        }
+    }
+    
+    let rectangle = new Rectangle(10,10,200,100,'blue')
+    let ctx = document.getElementById('rectangle').getContext('2d')
+    rectangle.setColor('#11cf7d')
+    rectangle.render()
+</script>
+</html>

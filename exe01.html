@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài tập 1</title>
+</head>
+<body>
+  <p id="result"></p>
+</body>
+<script>
+    
+    let arr = [5,6,5,6]
+    let count = 0
+    function findAvg(avg){
+      for(let i = 0; i < arr.length; i++){
+        count += arr[i]
+      }
+      avg = count/arr.length
+      document.getElementById('result').innerHTML = 'Điểm trung bình là: '+ avg
+    }
+    findAvg()
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 3</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function  sumOfListPrime(n) {
+        let check = true
+        if (n < 2) {
+            check = false
+        } 
+        else 
+        {
+            for (let i = 2; i < n - 1; i++) {
+                if (n % i == 0) {
+                    check = false
+                    break
+                }
+            }
+        }
+        if (check == true) {
+            return true
+        }
+    }
+    let x = parseInt(prompt("Số thứ tự của x: "))
+    let sum = 0
+    for (let i = 0; i < x; i++) {
+        if ( sumOfListPrime(i) == true) {
+            sum += i
+        }
+    }
+    document.write(" Tổng số nguyên tố từ 0 đến "+ x +" là: " + sum)
+    
+</script>
+</html>
